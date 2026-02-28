@@ -157,8 +157,50 @@ h1, h2, h3 {
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--cream);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 500;
+}
+
+/* Hero Offer Block */
+.hero-offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.offer-badge {
+    background-color: var(--mustard);
+    color: var(--dark-brown);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--dark-brown);
+}
+
+.offer-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--cream);
+    letter-spacing: 1px;
+}
+
+.offer-price s {
+    color: var(--cream);
+    opacity: 0.5;
+    font-size: 1.4rem;
+    margin-right: 6px;
+}
+
+.offer-note {
+    color: var(--cream);
+    font-size: 0.875rem;
+    opacity: 0.85;
 }
 
 /* Buttons */
@@ -326,12 +368,29 @@ h1, h2, h3 {
     color: var(--dark-brown);
 }
 
+.price-wrapper {
+    margin-bottom: 30px;
+}
+
+.price-old {
+    font-size: 1.5rem;
+    color: var(--dark-brown);
+    opacity: 0.4;
+    text-decoration: line-through;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: -5px;
+}
+
 .price {
     font-size: 3rem;
     font-weight: 700;
     color: var(--burnt-orange);
-    margin-bottom: 30px;
     font-family: 'Bebas Neue', sans-serif;
+}
+
+.price-period {
+    font-size: 1.2rem;
+    opacity: 0.6;
 }
 
 .features {
@@ -546,6 +605,15 @@ h1, h2, h3 {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .hero-offer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .offer-price {
+        font-size: 1.6rem;
     }
 
     .steps {

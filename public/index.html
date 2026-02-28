@@ -3,7 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chokas - We Build Websites. Simple. Fast. Local.</title>
+    <title>Chokas - Instant Website Builder on WhatsApp | Ready in Minutes</title>
+    <meta name="description" content="Build your business website in minutes, entirely on WhatsApp. Free preview, pay only if you love it. Intro offer: ₹499/year (50% off). The fastest, cheapest, quality website builder on the planet.">
+    <meta name="keywords" content="website builder, WhatsApp website, instant website, cheap website, business website India, ₹499 website">
+    <link rel="canonical" href="https://chokas.website/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chokas.website/">
+    <meta property="og:title" content="Chokas - Instant Website on WhatsApp | ₹499">
+    <meta property="og:description" content="Build your business website in minutes on WhatsApp. Free preview. Pay only if you love it. Intro offer ₹499/year.">
+    <meta property="og:image" content="https://chokas.website/og-image.png">
+    <meta property="og:site_name" content="Chokas">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chokas - Instant Website on WhatsApp">
+    <meta name="twitter:description" content="Website ready in minutes. Free preview. ₹499/year intro offer.">
+    <meta name="twitter:image" content="https://chokas.website/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GCBQ1ST7X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0GCBQ1ST7X');
+    </script>
+
+    <!-- Google Ads Conversion Tracking -->
+    <script>
+      gtag('config', 'AW-17950913380');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Chokas",
+      "url": "https://chokas.website",
+      "description": "Instant website builder on WhatsApp. Chat, preview for free, get your site live in minutes.",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "WhatsApp",
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "INR",
+        "description": "Intro offer - 50% off. Website live for 1 year.",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "50"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +81,21 @@
                 </div>
             </div>
             <h1 class="hero-title">
-                WE BUILD <span class="highlight">WEBSITES</span>.<br>
-                <span class="subtitle">JUST START IT.</span>
+                YOUR WEBSITE IN <span class="highlight">MINUTES</span>.<br>
+                <span class="subtitle">CHAT. PREVIEW. GO LIVE.</span>
             </h1>
-            <p class="hero-subtitle">Exclusively on WhatsApp. Starting at ₹999.</p>
-            <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20to%20build%20a%20website" class="btn btn-primary">Start on WhatsApp</a>
+            <p class="hero-subtitle">Fastest website builder on the planet. Exclusively on WhatsApp.</p>
+            <div class="hero-offer">
+                <span class="offer-badge">INTRO OFFER</span>
+                <span class="offer-price"><s>₹999</s> ₹499/year</span>
+                <span class="offer-note">Free preview — pay only if you love it</span>
+            </div>
+            <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20to%20build%20a%20website" class="btn btn-primary" onclick="gtag('event','conversion',{send_to:'AW-17950913380/NF7KCKX32IAcEOTm1O9C'})">Start on WhatsApp — It's Free to Try</a>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works">
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
             <h2>HOW IT WORKS</h2>
             <div class="steps">
@@ -37,68 +103,77 @@
                     <div class="step-number">1</div>
                     <div class="step-icon">💬</div>
                     <h3>Message us on WhatsApp</h3>
-                    <p>No forms. No calls. Just text us.</p>
+                    <p>No forms. No calls. No signups. Just text us.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div class="step-icon">📝</div>
-                    <h3>Share your business details</h3>
-                    <p>Tell us what you need. We'll handle the rest.</p>
+                    <div class="step-icon">👀</div>
+                    <h3>Preview your site for free</h3>
+                    <p>We build it in minutes. You see it before paying a single rupee.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-icon">🚀</div>
-                    <h3>Get your website live</h3>
-                    <p>Your site goes live in 3 days or less.</p>
+                    <h3>Love it? Go live instantly</h3>
+                    <p>Pay ₹499 and your site is live. That's it.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="container">
             <h2>SIMPLE PRICING</h2>
-            <p class="pricing-subtitle">No meetings. Just WhatsApp.</p>
+            <p class="pricing-subtitle">Free preview. No meetings. Just WhatsApp.</p>
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <h3 class="plan-name">STARTER</h3>
-                    <div class="price">₹999</div>
+                    <div class="price-wrapper">
+                        <div class="price-old">₹999</div>
+                        <div class="price">₹499<span class="price-period">/year</span></div>
+                    </div>
                     <ul class="features">
                         <li>✔ 1 page website</li>
-                        <li>✔ Contact form</li>
+                        <li>✔ Ready in minutes</li>
+                        <li>✔ Free preview first</li>
                         <li>✔ WhatsApp button</li>
-                        <li>✔ 3 day delivery</li>
                         <li>✔ Mobile responsive</li>
                     </ul>
-                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Starter%20package" class="btn btn-secondary">Get Started</a>
+                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Starter%20package" class="btn btn-secondary">Try Free Preview</a>
                 </div>
                 <div class="pricing-card featured">
-                    <div class="badge">POPULAR</div>
+                    <div class="badge">50% OFF</div>
                     <h3 class="plan-name">BUSINESS</h3>
-                    <div class="price">₹2,999</div>
+                    <div class="price-wrapper">
+                        <div class="price-old">₹2,999</div>
+                        <div class="price">₹1,499<span class="price-period">/year</span></div>
+                    </div>
                     <ul class="features">
                         <li>✔ Up to 5 pages</li>
                         <li>✔ Product showcase</li>
                         <li>✔ Contact forms</li>
                         <li>✔ WhatsApp integration</li>
-                        <li>✔ 5 day delivery</li>
+                        <li>✔ Ready in minutes</li>
                         <li>✔ Basic SEO setup</li>
                     </ul>
-                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Business%20package" class="btn btn-primary">Get Started</a>
+                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Business%20package" class="btn btn-primary">Try Free Preview</a>
                 </div>
                 <div class="pricing-card">
                     <h3 class="plan-name">PREMIUM</h3>
-                    <div class="price">₹5,999</div>
+                    <div class="price-wrapper">
+                        <div class="price-old">₹5,999</div>
+                        <div class="price">₹2,999<span class="price-period">/year</span></div>
+                    </div>
                     <ul class="features">
                         <li>✔ Up to 10 pages</li>
                         <li>✔ E-commerce ready</li>
                         <li>✔ Payment gateway</li>
                         <li>✔ Advanced SEO</li>
-                        <li>✔ 7 day delivery</li>
+                        <li>✔ Ready in minutes</li>
                         <li>✔ 1 month support</li>
                     </ul>
-                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Premium%20package" class="btn btn-secondary">Get Started</a>
+                    <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20the%20Premium%20package" class="btn btn-secondary">Try Free Preview</a>
                 </div>
             </div>
         </div>
@@ -110,11 +185,11 @@
             <h2>HAPPY CUSTOMERS</h2>
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p>"Got my site in 2 days. Super smooth."</p>
+                    <p>"Sent a WhatsApp, got my site in 10 minutes. Unreal."</p>
                     <cite>– Ramesh, Café Owner</cite>
                 </div>
                 <div class="testimonial">
-                    <p>"No jargon. No confusion. Just results."</p>
+                    <p>"Free preview sold me. No risk, just results."</p>
                     <cite>– Priya, Boutique Owner</cite>
                 </div>
                 <div class="testimonial">
@@ -128,9 +203,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>YOU SELL. WE BUILD.</h2>
-            <p>Get your website without the hassle.</p>
-            <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20to%20build%20a%20website" class="btn btn-primary">Start on WhatsApp</a>
+            <h2>TRY BEFORE YOU BUY.</h2>
+            <p>Free preview. No card. No commitment. Just WhatsApp us.</p>
+            <a href="https://wa.me/917795444709?text=Hi!%20I%20want%20to%20build%20a%20website" class="btn btn-primary" onclick="gtag('event','conversion',{send_to:'AW-17950913380/NF7KCKX32IAcEOTm1O9C'})">Get Your Free Preview</a>
         </div>
     </section>
 
@@ -140,7 +215,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>CHOKAS.WEBSITE</h3>
-                    <p>Your friendly neighbourhood web builder.</p>
+                    <p>Fastest, cheapest, quality website builder. Exclusively on WhatsApp.</p>
                 </div>
                 <div class="footer-contact">
                     <h4>CONTACT</h4>

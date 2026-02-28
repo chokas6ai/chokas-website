@@ -511,32 +511,29 @@ h1, h2, h3 {
     }
 
 
+    .logo-text {
+        max-width: 100%;
+    }
+
     .logo-content {
-        padding: 30px 50px;
+        padding: 20px 30px;
+        max-width: calc(100vw - 40px);
     }
 
     .logo-main {
-        font-size: 6rem;
+        font-size: clamp(3rem, 15vw, 6rem);
         letter-spacing: 2px;
     }
 
     .logo-sub {
-        font-size: 3rem;
-        letter-spacing: 12px;
+        font-size: clamp(1.5rem, 7.5vw, 3rem);
+        letter-spacing: clamp(6px, 2vw, 12px);
         margin-top: -8px;
     }
 
     .logo-sub::before,
     .logo-sub::after {
-        width: 30px;
-    }
-
-    .logo-sub::before {
-        left: -45px;
-    }
-
-    .logo-sub::after {
-        right: -45px;
+        display: none;
     }
 
     .hero-title {

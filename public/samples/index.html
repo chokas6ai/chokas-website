@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Websites - Chokas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --burnt-orange: #C65A2E;
+            --mustard: #D8A642;
+            --teal: #2F6F6D;
+            --cream: #F2E5C8;
+            --dark-brown: #3A2A20;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-brown);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--dark-brown);
+            padding: 20px 0;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            font-family: 'Big Shoulders Stencil Display', cursive;
+            font-size: 2rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .header-brand span {
+            color: var(--mustard);
+            font-size: 1rem;
+            letter-spacing: 6px;
+            display: block;
+            margin-top: -6px;
+        }
+
+        .header-back {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 2px solid var(--cream);
+            padding: 8px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .header-back:hover {
+            background-color: var(--cream);
+            color: var(--dark-brown);
+        }
+
+        /* Hero */
+        .samples-hero {
+            background-color: var(--burnt-orange);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--dark-brown);
+        }
+
+        .samples-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--cream);
+            margin-bottom: 10px;
+        }
+
+        .samples-hero p {
+            font-size: 1.15rem;
+            color: var(--cream);
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 60px 0 80px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+        }
+
+        .sample-card {
+            background-color: var(--white);
+            border: 3px solid var(--dark-brown);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 8px 8px 0 var(--dark-brown);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--dark-brown);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sample-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 11px 11px 0 var(--dark-brown);
+        }
+
+        .sample-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 var(--dark-brown);
+        }
+
+        .sample-thumb {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            border-bottom: 3px solid var(--dark-brown);
+            position: relative;
+        }
+
+        .sample-thumb iframe {
+            width: 200%;
+            height: 200%;
+            border: none;
+            transform: scale(0.5);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+
+        .sample-thumb-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+        }
+
+        .sample-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sample-tag {
+            display: inline-block;
+            background-color: var(--mustard);
+            color: var(--dark-brown);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: 2px solid var(--dark-brown);
+            margin-bottom: 12px;
+            align-self: flex-start;
+        }
+
+        .sample-card:nth-child(2) .sample-tag {
+            background-color: var(--burnt-orange);
+            color: var(--cream);
+        }
+
+        .sample-card:nth-child(3) .sample-tag {
+            background-color: var(--teal);
+            color: var(--cream);
+        }
+
+        .sample-body h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .sample-body p {
+            font-size: 0.95rem;
+            color: #5a4a3a;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .sample-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--burnt-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sample-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .sample-card:hover .sample-link svg {
+            transform: translateX(4px);
+        }
+
+        /* CTA */
+        .samples-cta {
+            background-color: var(--teal);
+            padding: 60px 0;
+            text-align: center;
+            border-top: 4px solid var(--dark-brown);
+        }
+
+        .samples-cta h2 {
+            font-size: 2.5rem;
+            color: var(--cream);
+            margin-bottom: 12px;
+        }
+
+        .samples-cta p {
+            font-size: 1.1rem;
+            color: var(--cream);
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 3px solid var(--dark-brown);
+            box-shadow: 4px 4px 0 var(--dark-brown);
+            background-color: var(--mustard);
+            color: var(--dark-brown);
+        }
+
+        .btn:hover {
+            background-color: var(--cream);
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--dark-brown);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .footer a {
+            color: var(--mustard);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .samples-hero { padding: 40px 0; }
+            .gallery { padding: 40px 0 60px; }
+
+            .samples-hero h1 { font-size: 2.5rem; }
+
+            .header-brand { font-size: 1.5rem; }
+            .header-brand span { font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="header-brand">CHOKAS<span>WEBSITE</span></a>
+            <a href="/" class="header-back">&larr; Back to Home</a>
+        </div>
+    </header>
+
+    <section class="samples-hero">
+        <div class="container">
+            <h1>SAMPLE WEBSITES</h1>
+            <p>Pick a style. We'll customize it for your business.</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+
+                <a href="https://chokas-sample-starter.web.app" target="_blank" class="sample-card">
+                    <div class="sample-thumb">
+                        <iframe src="https://chokas-sample-starter.web.app" loading="lazy" tabindex="-1" title="Starter template preview"></iframe>
+                        <div class="sample-thumb-overlay"></div>
+                    </div>
+                    <div class="sample-body">
+                        <span class="sample-tag">Starter</span>
+                        <h3>CLEAN & MODERN</h3>
+                        <p>Perfect for small businesses, freelancers, and startups. A single-page layout with hero, services, about, and contact sections.</p>
+                        <span class="sample-link">View Live Preview <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6.5 3.5L11 8l-4.5 4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </div>
+                </a>
+
+                <a href="https://chokas-sample-restaurant.web.app" target="_blank" class="sample-card">
+                    <div class="sample-thumb">
+                        <iframe src="https://chokas-sample-restaurant.web.app" loading="lazy" tabindex="-1" title="Restaurant template preview"></iframe>
+                        <div class="sample-thumb-overlay"></div>
+                    </div>
+                    <div class="sample-body">
+                        <span class="sample-tag">Restaurant</span>
+                        <h3>FOOD & DINING</h3>
+                        <p>Built for restaurants, cafes, and food businesses. Features a menu showcase, opening hours, location map, and reservation CTA.</p>
+                        <span class="sample-link">View Live Preview <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6.5 3.5L11 8l-4.5 4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </div>
+                </a>
+
+                <a href="https://chokas-sample-portfolio.web.app" target="_blank" class="sample-card">
+                    <div class="sample-thumb">
+                        <iframe src="https://chokas-sample-portfolio.web.app" loading="lazy" tabindex="-1" title="Portfolio template preview"></iframe>
+                        <div class="sample-thumb-overlay"></div>
+                    </div>
+                    <div class="sample-body">
+                        <span class="sample-tag">Portfolio</span>
+                        <h3>CREATIVE & PROFESSIONAL</h3>
+                        <p>Ideal for designers, developers, photographers, and creatives. Showcases projects, skills, testimonials, and a contact section.</p>
+                        <span class="sample-link">View Live Preview <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M6.5 3.5L11 8l-4.5 4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="samples-cta">
+        <div class="container">
+            <h2>LIKE WHAT YOU SEE?</h2>
+            <p>Tell us which style you want. We'll make it yours.</p>
+            <a href="https://wa.me/917795444709?text=Hi!%20I%20saw%20your%20sample%20websites%20and%20I%27d%20like%20to%20get%20one%20built!" class="btn">Start on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <a href="/">CHOKAS.WEBSITE</a></p>
+        </div>
+    </footer>
+
+    <script>
+    /* Pass ?phone= to iframe previews and links for personalization */
+    (function () {
+      var phone = new URLSearchParams(window.location.search).get("phone");
+      if (!phone) return;
+      var q = "?phone=" + encodeURIComponent(phone);
+      document.querySelectorAll(".sample-card").forEach(function (card) {
+        card.href += q;
+        var iframe = card.querySelector("iframe");
+        if (iframe) iframe.src += q;
+      });
+    })();
+    </script>
+</body>
+</html>
